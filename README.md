@@ -3,8 +3,9 @@
 ## Dependencies
 
 ### Core
-- nvm `18.0`
+- nvm `18.17.1`
 - react `18.2`
+- npm `10.6` and   upgrade it to 18.3.1
 - react-router-dom `6.10`
 
 ### Input handle

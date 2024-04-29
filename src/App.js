@@ -1,4 +1,5 @@
 import React from 'react';
+import ErrorBoundary from './components/error-boundary/ErrorBoundary';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import { ColorModeContext, useMode } from './theme';
 import TopBar from './components/appbar';
@@ -7,9 +8,8 @@ function App() {
 
   const [theme, colorMode] = useMode();
 
-  return (<>
+  return (<ErrorBoundary>
       {/* Redux Provider */}
-        {/* ErrorBoundary */}
           {/* Authentication layer */}
             {/* Authorization layer */}
               <ColorModeContext.Provider value={colorMode}>
@@ -21,7 +21,7 @@ function App() {
                     {/* BaseRouter  */}
                 </ThemeProvider>
               </ColorModeContext.Provider>
-  </>);
+          </ErrorBoundary>);
 }
 
 export default App;
