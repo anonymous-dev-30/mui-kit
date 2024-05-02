@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+*/
 
 html, body, #root {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.App {
+.app {
   display: flex;
   position: relative;
 }

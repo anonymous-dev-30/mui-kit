@@ -7,7 +7,7 @@
     "extends": [
         "react-app/",
         "react-app/jest",
-        "aribnb",
+        // "aribnb",
         "plugin:prettier/recommended"
     ],
     "parserOptions": {
