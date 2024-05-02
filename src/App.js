@@ -4,6 +4,8 @@ import { ThemeProvider, CssBaseline } from '@mui/material';
 import { ColorModeContext, useMode } from './theme';
 import TopBar from './components/appbar';
 import DashBoard from './components/dashboard';
+import Team from './components/scenes/team';
+import Contacts from './components/scenes/contacts';
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
         <main className='content'>
           <TopBar />
           <DashBoard />
+          <Team />
+          <Contacts />
         </main>
         {/* BaseRouter  */}
       </ThemeProvider>
