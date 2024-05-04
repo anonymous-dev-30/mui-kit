@@ -13,15 +13,15 @@ function App() {
   return (<ErrorBoundary>
     {/* Redux Provider */}
     {/* Authentication layer */}
-    {/* Authorization layer */}
+    {/* Authorization layer */}    
     <BaseRouter>
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
-          <CssBaseline />
+          <CssBaseline />         
           <div className='app'>
-            <SideBarComp />
-            <main className='content'>
-              <TopBar />
+            {/* <SideBarComp /> */}
+            <main className='content'>            
+              <TopBar />              
             </main>
           </div>
         </ThemeProvider>
