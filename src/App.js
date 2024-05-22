@@ -7,27 +7,27 @@ import BaseRouter from './components/router';
 import SideBarComp from './components/sidebar';
 
 function App() {
-
   const [theme, colorMode] = useMode();
 
-  return (<ErrorBoundary>
-    {/* Redux Provider */}
-    {/* Authentication layer */}
-    {/* Authorization layer */}    
-    <BaseRouter>
+  return (
+    <ErrorBoundary>
+      {/* Redux Provider */}
+      {/* Authentication layer */}
+      {/* Authorization layer */}
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
-          <CssBaseline />         
-          <div className='app'>
-            {/* <SideBarComp /> */}
-            <main className='content'>            
-              <TopBar />              
+          <CssBaseline />
+          <div className="app">
+            <SideBarComp />
+            <main className="content">
+              <TopBar />
+              <BaseRouter></BaseRouter>
             </main>
           </div>
         </ThemeProvider>
       </ColorModeContext.Provider>
-    </BaseRouter>
-  </ErrorBoundary>);
+    </ErrorBoundary>
+  );
 }
 
 export default App;
