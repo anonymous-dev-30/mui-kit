@@ -1,15 +1,12 @@
-import React from 'react'
+import React from 'react';
 import PageHeader from '../appbar/PageHeader';
 
 const DashBoard = () => {
   return (
     <>
-      <PageHeader
-        title="DASHBOARD"
-        subTitle="Welcome to your dashboard"
-      />
+      <PageHeader title="DASHBOARD" subTitle="Welcome to your dashboard" />
     </>
-  )
-}
+  );
+};
 
 export default DashBoard;
