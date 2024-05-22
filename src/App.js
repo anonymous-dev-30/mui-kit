@@ -17,13 +17,14 @@ function App() {
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <div className="app">
-            <SideBarComp />
-            <main className="content">
-              <TopBar />
-              <BaseRouter></BaseRouter>
-            </main>
-          </div>
+          <BaseRouter>
+            <div className="app">
+              <SideBarComp />
+              <main className="content">
+                <TopBar />
+              </main>
+            </div>
+          </BaseRouter>
         </ThemeProvider>
       </ColorModeContext.Provider>
     </ErrorBoundary>

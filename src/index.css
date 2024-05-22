@@ -8,6 +8,11 @@ html, body, #root {
 .app {
   display: flex;
   position: relative;
+  height: 100vh;
+}
+
+#aside, .ps-sidebar-root {
+  height: 100vh;
 }
 
 ::-webkit-scrollbar {

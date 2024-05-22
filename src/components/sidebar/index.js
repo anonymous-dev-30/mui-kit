@@ -31,27 +31,9 @@ const SideBarComp = () => {
 
   return (
     // TODO: fix styles as per https://github.com/azouaoui-med/react-pro-sidebar/blob/master/storybook/Playground.tsx
-    // <Box
-    // 	sx={{
-    // 		"& .pro-sidebar-inner": {
-    // 			background: `${colors.primary[400]}`,
-    // 		},
-    // 		"& .pro-icon-wrapper": {
-    // 			backgroundColor: 'transparent !important',
-    // 		},
-    // 		"& .pro-inner-item": {
-    // 			padding: '5px 35px 5px 20px !important',
-    // 		},
-    // 		"& .pro-inner-item:hover": {
-    // 			color: '#868dfb !important',
-    // 		},
-    // 		"& .pro-menu-item.active": {
-    // 			color: '#6870fa !important',
-    // 		},
-    // 	}}
-    // >
     <div className="sidebar">
-      {!isCollapsed && ( // Render Admin section only when expanded
+      {
+        // Render Admin section only when expanded
         <Sidebar collapsed={isCollapsed}>
           {/* <Box
 							display='flex'
@@ -63,37 +45,37 @@ const SideBarComp = () => {
 						> */}
           <Menu iconShape="square">
             <MenuItem>
-              <Typography variant="h3" color={colors.grey[100]}>
+              <Typography variant="h5" color={colors.grey[100]}>
                 ADMIN
               </Typography>
+            </MenuItem>
+            <MenuItem>
               <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                 <MenuOutlined />
               </IconButton>
             </MenuItem>
-            <MenuItem sx={{ mb: '25px' }}>
-              <Box display="flex" alignItems="center" justifyContent="center">
-                <img
-                  alt="profile-user"
-                  width="100px"
-                  height="100px"
-                  src={'../../assets/user.png'}
-                  style={{ cursor: 'pointer', borderRadius: '50%' }}
-                />
-              </Box>
-              <Box textAlign="center">
-                <Typography
-                  variant="h2"
-                  color={`${colors.grey[100]}`}
-                  fontWeight="bold"
-                  sx={{ m: '10px 0 0 0' }}
-                >
-                  Smeet Kothari
-                </Typography>
-                <Typography variant="h5" color={`${colors.greenAccent[500]}`}>
-                  VP Admin
-                </Typography>
-              </Box>
-            </MenuItem>
+            {/* TODO: fix styling of profile pic and name */}
+            {/* <MenuItem sx={{ mb: '25px' }}>
+              <img
+                alt="profile-user"
+                width="100px"
+                height="100px"
+                src={'../../assets/user.png'}
+                style={{ cursor: 'pointer', borderRadius: '50%' }}
+              />
+              <Typography
+                variant="h4"
+                color={`${colors.grey[100]}`}
+                fontWeight="bold"
+                sx={{ m: '10px 0 0 0' }}
+              >
+                Smeet Kothari
+              </Typography>
+              <Typography variant="h5" color={`${colors.greenAccent[500]}`}>
+                VP Admin
+              </Typography>
+            </MenuItem> */}
+
             <MenuItem>
               <SideBarItems
                 title={'DashBoard'}
@@ -106,7 +88,7 @@ const SideBarComp = () => {
             </MenuItem>
           </Menu>
         </Sidebar>
-      )}
+      }
     </div>
     // </Box>
   );
